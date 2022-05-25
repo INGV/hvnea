@@ -1,0 +1,85 @@
+########################################################################
+TARGET	= ms2sac
+
+SRCS	= $(TARGET).c read_mseed_data.c get_stn_evt_info.c \
+	init_sac_header.c write_sac.c
+
+OBJS	= $(SRCS:%.c=%.o)
+
+########################################################################
+
+# Start Configuration Section
+
+# 1. Select installation dir.
+# Installation in /share/apps.
+#ROOTDIR	= /share/apps
+#LEAPSECONDS = $(ROOTDIR)/etc/leapseconds
+#COORD_FILE	= \"$(ROOTDIR)/etc/bdsn/stat.db.coord\"
+
+# Installation in /usr/local.
+ROOTDIR = /usr/local
+LEAPSECONDS = /usr/local/etc/leapseconds
+COORD_FILE	= \"/usr/contrib/data/bdsn/stat.db.coord\"
+
+# 2. Select OS library directory structure.
+# Linux:
+LIB32DIR= $(ROOTDIR)/lib
+LIB64DIR= $(ROOTDIR)/lib64
+MANDIR	= $(ROOTDIR)/share/man
+MANEXT	= 3
+
+# Solaris:
+#LIB32DIR= $(ROOTDIR)/lib
+#LIB64DIR= $(ROOTDIR)/lib/64
+#MANDIR	= $(ROOTDIR)/man
+#MANEXT	= 3
+
+# 3. These should not have to be changed.
+INCDIR	= $(ROOTDIR)/include
+BINDIR	= $(ROOTDIR)/bin
+
+# 4. Select compiler and options.
+CC	= cc 
+COPT	= -g
+CFLAGS_SITE = -m64 -Wall
+CFLAGS	= $(CFLAGS_SITE) $(COPT) $(IQLIB2) -DDEFAULT_COORD_FILE=$(COORD_FILE)
+
+IQLIB2	= -I../qlib2
+QLIB2	= ../qlib2/lib64/libqlib2.a
+LIBS	= $(QLIB2) -lm
+
+########################################################################
+
+all:	$(TARGET) 
+
+$(TARGET):	$(OBJS)
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $(TARGET) $(OBJS) $(LIBS)
+
+install:	install_$(TARGET) 
+
+install_$(TARGET):	$(TARGET)
+	cp $(TARGET) $(BINDIR)/$(TARGET)
+
+install_man:	$(TARGET).man 
+	cp $(TARGET).man $(MANDIR)/man$(MANEXT)/$(TARGET).$(MANEXT)
+
+clean:	
+	rm -rf *.o
+
+veryclean:	clean
+	rm -rf $(TARGET) 
+
+tar:	$(TARGET)
+	(cd ..; tar cf - $(TARGET)/*.c $(TARGET)/*.h $(TARGET)/Makefile \
+		$(TARGET)/*.man $(TARGET)/$(TARGET) \
+		$(TARGET)/README $(TARGET)/CHANGES ) \
+	| gzip > /tmp/$(TARGET).tar.gz
+
+cleandepend:
+	makedepend
+
+depend:
+	makedepend $(CFLAGS) *.c
+
+########################################################################
+# DO NOT DELETE THIS LINE -- make depend depends on it.
