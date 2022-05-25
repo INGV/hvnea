@@ -1,0 +1,85 @@
+########################################################################
+TARGET	= qmerge
+TARGET2	= qverify
+TARGET3	= Qmerge
+TARGET4	= Dmerge
+TARGET5	= Rmerge
+TARGET6 = Mmerge
+
+SRCS	= $(TARGET).c find_best_stream.c get_block_info.c get_stream_info.c \
+	pack_unpack.c parse_cmdline.c position_stream.c \
+	process_block.c process_utils.c qio.c trim_data.c duration.c
+
+OBJS	= $(SRCS:%.c=%.o)
+
+IQLIB2	= -I../qlib2
+QLIB2	= ../qlib2/lib64/libqlib2.a
+#QLIB2	= ../qlib2/lib64/libqlib2.debug.a
+LIBS	= $(QLIB2) -lm
+
+#----------------------------------------------------------------------
+# Select installation dirs
+
+# Install in /share/apps
+#ROOTDIR	= /share/apps
+#BINDIR	= $(ROOTDIR)/bin
+#MANDIR	= $(ROOTDIR)/share/man
+#MANEXT	= 1
+
+# Install in /usr/local
+ROOTDIR	= /usr/local
+BINDIR	= $(ROOTDIR)/bin
+MANDIR	= $(ROOTDIR)/man
+MANEXT	= 1
+
+#----------------------------------------------------------------------
+
+CC	= cc -Wall -m64
+#CC	= cc -m64
+COPT	= -g
+CFLAGS	= $(COPT) $(IQLIB2) -DNO_AUTO_VERIFY -DDEFAULT_NETWORK=\"BK\" `getconf LFS_CFLAGS`
+LDFLAGS	= `getconf LFS_LDFLAGS`
+
+########################################################################
+
+all:	$(TARGET) 
+
+$(TARGET):	$(OBJS)
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $(TARGET) $(OBJS) $(LIBS)
+
+install:	install_$(TARGET) 
+
+install_$(TARGET):	$(TARGET)
+	cp $(TARGET) $(BINDIR)/$(TARGET)
+	for f in $(TARGET2) $(TARGET3) $(TARGET4) $(TARGET5) $(TARGET6) ; do \
+		rm -f $(BINDIR)/$$f ; \
+		(cd $(BINDIR); ln -s $(TARGET) $$f) ; \
+	done
+
+install_man:	$(TARGET).man 
+	cp $(TARGET).man $(MANDIR)/man$(MANEXT)/$(TARGET).$(MANEXT)
+	cp $(TARGET2).man $(MANDIR)/man$(MANEXT)/$(TARGET2).$(MANEXT)
+
+clean:	
+	rm -rf *.o
+
+veryclean:	clean
+	rm -rf $(TARGET) 
+
+tar:	$(TARGET)
+	(cd ..; tar cf - $(TARGET)/*.c $(TARGET)/*.h $(TARGET)/Makefile \
+		$(TARGET)/*.man $(TARGET)/$(TARGET) $(TARGET)/$(TARGET2) \
+		$(TARGET)/README $(TARGET)/CHANGES ) \
+	| gzip > /tmp/$(TARGET).tar.gz
+
+cleandepend:
+	makedepend
+
+depend:
+	makedepend $(CFLAGS) *.c
+
+lint:
+	lint -I../qlib2 -Xarch=amd64 -Nlevel=3 $(SRCS)
+
+########################################################################
+# DO NOT DELETE THIS LINE -- make depend depends on it.
