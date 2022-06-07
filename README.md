@@ -1,5 +1,5 @@
 # hvnea
-    The Docker contains tools for HVNEA pakage
+    The Docker image contains tools for HVNEA pakage
 -  Geopsy 3.4.1
 -  gsac
 -  Pyrocko
