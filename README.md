@@ -18,9 +18,7 @@ Installation (on Linux and Mac)
 - make sure you have installed all necessary third party programs
 
 Use with Docker
-first time:
-- copy the Docker image to your machine or create the Docker image by yourself using the dockerfile "Dockerfile" and the software version in HVNEA.yyyymmdd.docker.tar.gz; this version is different from that in HVNEA.yyyymmdd.tar.gz in that it uses gsac instead of sac
-- load it into the Docker engine
-- create a Docker container running the image
-next times:
-- just run the existing container
+- First time:
+copy the Docker image to your machine or create the Docker image by yourself using the dockerfile "Dockerfile" and the software version in HVNEA.yyyymmdd.docker.tar.gz (this version is different from that in HVNEA.yyyymmdd.tar.gz in that it uses gsac instead of sac); load it into the Docker engine; create a Docker container running the image
+- Next times:
+just run the existing container
