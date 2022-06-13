@@ -8,15 +8,30 @@ The package has been successfully tested on the operating systems Ubuntu 20.04, 
 
 List of third party programs and their version:
 
-Geopsy 3.4.1.
-Geopsy is one of the central components of HVNEA processing; it is developed and mantained by Geopsy team (https://www.geopsy.org/index.html)
+Geopsy is one of the central components of HVNEA processing; it is developed and mantained by Geopsy team (https://www.geopsy.org/index.html); version used here is 3.4.1.
 
-Gsac ... 
-Gsac is part of the software CPS (Computer Programs in Seismology, https://www.eas.slu.edu/eqc/eqc_cps/CPS/CPS330.html),
+Gsac (V1.1.5l) is part of the software CPS (Computer Programs in Seismology, https://www.eas.slu.edu/eqc/eqc_cps/CPS/CPS330.html),
 and is used here by courtesy of professor R. B. Herrmann, Department of Earth and Atmospheric Sciences of Saint Louis University.
 
-...
-...
+Qt is needed for building and running Geopsy; the version we used is 5.14.2, and we took it from Stephan Binner's personal repository ppa:beineri/opt-qt-5.14.2-focal (https://launchpad.net/~beineri/+archive/ubuntu/opt-qt-5.14.2-focal).
+
+Gnuplot
+
+Gmt
+
+qlib2 et al.
+
+rdseed
+
+pyrocko
+
+msi
+
+tex live
+
+jq
+
+Docker
 
 Installation (on Linux and Mac)
 - download the distribution file HVNEA.yyyymmdd.tar.gz
