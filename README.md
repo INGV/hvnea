@@ -13,7 +13,7 @@ Qt is needed for building and running Geopsy; the version we used is 5.14.2, and
 
 Gnuplot is one of the most widespread graphing utilities; here we used version 5.2.8, but using a newer version would probably not cause any problems.
 
-Gmt ...
+GMT (Generic Mapping Tools, https://www.generic-mapping-tools.org/) is a suite of tools widely used in Earth, Ocean and Planetary sciences, and more. For this package we use version 6 (GMT 6: Wessel, P., Luis, J. F., Uieda, L., Scharroo, R., Wobbe, F., Smith, W. H. F., & Tian, D. (2019). The Generic Mapping Tools version 6. Geochemistry, Geophysics, Geosystems, 20, 5556–5564. Https://doi.org/10.1029/2019GC008515).
 
 qlib2 et al. ...
 
