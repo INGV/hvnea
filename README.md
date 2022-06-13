@@ -11,7 +11,7 @@ and is used here by courtesy of professor R. B. Herrmann, Department of Earth an
 
 Qt is needed for building and running Geopsy; the version we used is 5.14.2, and we took it from Stephan Binner's personal repository ppa:beineri/opt-qt-5.14.2-focal (https://launchpad.net/~beineri/+archive/ubuntu/opt-qt-5.14.2-focal).
 
-Gnuplot is one of the most widespread graphing utilities, in this 
+Gnuplot is one of the most widespread graphing utilities; here we used version 5.2.8, but using a newer version would probably not cause any problems.
 
 Gmt ...
 
