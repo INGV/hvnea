@@ -1,10 +1,6 @@
 # hvnea
 
-HVNEA (HV Noise and Earthquake Automatic analysis) is a software package to automatically 
-compute the horizontal-to-vertical spectral ratios (HV) on earthquakes and ambient noise vibrations.
-This package makes extensive use of third party programs, such as Geopsy, Gsac, Gnuplot, GMT, others;
-so for your convenience we also make it available as a docker image.
-The package has been successfully tested on the operating systems Ubuntu 20.04, Ubuntu 22.04, Debian 10 and Debian 11, with the program versions listed below. The operating system used for the Docker image is Ubuntu 20.04; many of the programs necessary for HVNEA to work have been installed with the apt utility.
+HVNEA (HV Noise and Earthquake Automatic analysis) is a software package to automatically compute the horizontal-to-vertical spectral ratios (HV) on earthquakes and ambient noise vibrations. This package makes extensive use of third party programs, such as Geopsy, Gsac, Gnuplot, GMT, others; so for your convenience we also make it available as a docker image. The package has been successfully tested on the operating systems Ubuntu 20.04, Ubuntu 22.04, Debian 10 and Debian 11, with the program versions listed below. The operating system used for the Docker image is Ubuntu 20.04; many of the programs necessary for HVNEA to work have been installed with the apt utility.
 
 List of third party programs and their version:
 
@@ -15,23 +11,23 @@ and is used here by courtesy of professor R. B. Herrmann, Department of Earth an
 
 Qt is needed for building and running Geopsy; the version we used is 5.14.2, and we took it from Stephan Binner's personal repository ppa:beineri/opt-qt-5.14.2-focal (https://launchpad.net/~beineri/+archive/ubuntu/opt-qt-5.14.2-focal).
 
-Gnuplot
+Gnuplot ...
 
-Gmt
+Gmt ...
 
-qlib2 et al.
+qlib2 et al. ...
 
-rdseed
+rdseed ...
 
-pyrocko
+pyrocko ...
 
-msi
+msi ...
 
-tex live
+tex live ...
 
-jq
+jq ...
 
-Docker
+Docker ...
 
 Installation (on Linux and Mac)
 - download the distribution file HVNEA.yyyymmdd.tar.gz
