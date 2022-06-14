@@ -17,7 +17,7 @@ GMT (Generic Mapping Tools, https://www.generic-mapping-tools.org/) is a suite o
 
 qlib2 library and programs qmerge, qedit, ms2sac are provided by Quanterra Users Group (https://www.ncedc.org/qug/), which, among other things, maintains a set of programs used for data acquisition and manipulation (https://www.ncedc.org/qug/software/)
 
-rdseed ...
+rdseed is a program for reading and interpreting SEED (Standard for Exchange of Earthquake Data) files; for a long time it was maintained by IRIS (https://ds.iris.edu/), now it is an open source project on GitHub (https://github.com/iris-edu-legacy/rdseed)
 
 pyrocko ...
 
