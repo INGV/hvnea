@@ -21,11 +21,11 @@ rdseed is a program for reading and interpreting SEED (Standard for Exchange of 
 
 Pyrocko (https://pyrocko.org/) is an open source seismology toolbox and library; we use it to estimate the arrival times of seismic waves
 
-msi ...
+msi (miniSEED inspector) is provided by IRIS and is hosted on GitHub (https://github.com/iris-edu/msi); it parses and reports details from SEED formatted data records
 
-tex live ...
+TeX Live (https://www.tug.org/texlive/) is an easy way to use the TeX document production system; it includes all the major TeX-related programs
 
-jq ...
+jq (https://stedolan.github.io/jq/) is a lightweight and very flexible command-line JSON processor; we use it for parsing information about FDSN data centers
 
 Installation (on Linux and Mac)
 - download the distribution file HVNEA.yyyymmdd.tar.gz
