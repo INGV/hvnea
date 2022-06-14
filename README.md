@@ -19,15 +19,13 @@ qlib2 library and programs qmerge, qedit, ms2sac are provided by Quanterra Users
 
 rdseed is a program for reading and interpreting SEED (Standard for Exchange of Earthquake Data) files; for a long time it was maintained by IRIS (https://ds.iris.edu/), now it is an open source project on GitHub (https://github.com/iris-edu-legacy/rdseed)
 
-pyrocko ...
+Pyrocko (https://pyrocko.org/) is an open source seismology toolbox and library; we use it to estimate the arrival times of seismic waves
 
 msi ...
 
 tex live ...
 
 jq ...
-
-Docker ...
 
 Installation (on Linux and Mac)
 - download the distribution file HVNEA.yyyymmdd.tar.gz
