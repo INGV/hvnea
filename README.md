@@ -15,7 +15,7 @@ Gnuplot is one of the most widespread graphing utilities; here we used version 5
 
 GMT (Generic Mapping Tools, https://www.generic-mapping-tools.org/) is a suite of tools widely used in Earth, Ocean and Planetary sciences, and more. For this package we use version 6 (GMT 6: Wessel, P., Luis, J. F., Uieda, L., Scharroo, R., Wobbe, F., Smith, W. H. F., & Tian, D. (2019). The Generic Mapping Tools version 6. Geochemistry, Geophysics, Geosystems, 20, 5556–5564. Https://doi.org/10.1029/2019GC008515).
 
-qlib2 et al. ...
+qlib2 library and programs qmerge, qedit, ms2sac are provided by Quanterra Users Group (https://www.ncedc.org/qug/), which, among other things, maintains a set of programs used for data acquisition and manipulation (https://www.ncedc.org/qug/software/)
 
 rdseed ...
 
