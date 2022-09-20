@@ -41,3 +41,6 @@ copy the Docker image to your machine or create the Docker image by yourself usi
 just run the existing container
 
 [Dockerimage](https://hub.docker.com/r/ingv/hvnea)
+
+Please cite as:
+Maurizio Vassallo, Gaetano Riccio, Alessia Mercuri, Giovanna Cultrera, Giuseppe Di Giulio; HV Noise and Earthquake Automatic Analysis (HVNEA). Seismological Research Letters 2022; doi: https://doi.org/10.1785/0220220115
