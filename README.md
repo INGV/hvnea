@@ -2,6 +2,9 @@
 
 HVNEA (HV Noise and Earthquake Automatic analysis) is a software package to automatically compute the horizontal-to-vertical spectral ratios (HV) on earthquakes and ambient noise vibrations. This package makes extensive use of third party programs, such as Geopsy, Gsac, Gnuplot, GMT, others; so for your convenience we also make it available as a docker image. The package has been successfully tested on the operating systems Ubuntu 20.04, Ubuntu 22.04, Debian 10 and Debian 11, with the program versions listed below. The operating system used for the Docker image is Ubuntu 20.04; many of the programs necessary for HVNEA to work have been installed with the apt utility.
 
+The user manual for the software is available as Supplementary Data of article:
+Maurizio Vassallo, Gaetano Riccio, Alessia Mercuri, Giovanna Cultrera, Giuseppe Di Giulio; HV Noise and Earthquake Automatic Analysis (HVNEA). Seismological Research Letters 2022; doi: https://doi.org/10.1785/0220220115
+
 List of third party programs and their version:
 
 Geopsy is one of the central components of HVNEA processing; it is developed and mantained by Geopsy team (https://www.geopsy.org/index.html); version used here is 3.4.1.
@@ -41,7 +44,3 @@ copy the Docker image to your machine or create the Docker image by yourself usi
 just run the existing container
 
 [Dockerimage](https://hub.docker.com/r/ingv/hvnea)
-
-Please cite as:
-
-Maurizio Vassallo, Gaetano Riccio, Alessia Mercuri, Giovanna Cultrera, Giuseppe Di Giulio; HV Noise and Earthquake Automatic Analysis (HVNEA). Seismological Research Letters 2022; doi: https://doi.org/10.1785/0220220115
